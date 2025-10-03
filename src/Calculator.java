@@ -7,14 +7,15 @@ public class Calculator {
         printInput(zahl1, zahl2);
 
         printResult("Addition", add(zahl1, zahl2));
+        printResult("Substraktion", substract(zahl1, zahl2));
         printResult("Multiplikation", multiply(zahl1, zahl2));
         printResult("Division", divide(zahl1, zahl2));
         printResult("Rest der Division = ", restBerechnen(zahl1, zahl2));
     }
 
 
-    public static void printResult(String methodeName, double result){
-        System.out.println("Das Ergebnis der " + methodeName + " = " + result);
+    public static void printResult(String resultName, double result){
+        System.out.println("Das Ergebnis der " + resultName + " = " + result);
     }
 
     public static void printInput (double a, double b){
