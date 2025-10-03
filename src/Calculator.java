@@ -10,7 +10,7 @@ public class Calculator {
         printResult("Substraktion", substract(zahl1, zahl2));
         printResult("Multiplikation", multiply(zahl1, zahl2));
         printResult("Division", divide(zahl1, zahl2));
-        printResult("Rest der Division = ", restBerechnen(zahl1, zahl2));
+        printResult("Rest der Division", restBerechnen(zahl1, zahl2));
     }
 
 
@@ -42,11 +42,20 @@ public class Calculator {
     }
 
     public static double divide (double a, double b){
-        return a / b; // oder return a / (b * 1.0) dann wirds ein double und ich muss es nicht überall ändern
+        if (b == 0){
+            System.out.println("Error: Division durch 0 nicht gültig.");
+            return 0;
+        } else {
+            return a / b; // oder return a / (b * 1.0) dann wirds ein double und ich muss es nicht überall ändern
+        }
     }
 
     public static double restBerechnen (double a, double b){
-        return a % b;
+        if (b == 0){
+            System.out.println("Error: Division durch 0 nicht gültig.");
+            return 0;
+        } else {
+            return a % b;
+        }
     }
-
 }
